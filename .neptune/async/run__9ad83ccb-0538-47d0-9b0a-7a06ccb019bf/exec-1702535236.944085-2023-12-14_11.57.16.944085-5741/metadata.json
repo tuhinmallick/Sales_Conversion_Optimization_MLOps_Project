@@ -1,0 +1,10 @@
+{
+  "mode": "async",
+  "containerId": "9ad83ccb-0538-47d0-9b0a-7a06ccb019bf",
+  "containerType": "run",
+  "structureVersion": 1,
+  "os": "Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "pythonVersion": "3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]",
+  "neptuneClientVersion": "1.8.6",
+  "createdAt": "2023-12-14T06:27:16.945769"
+}

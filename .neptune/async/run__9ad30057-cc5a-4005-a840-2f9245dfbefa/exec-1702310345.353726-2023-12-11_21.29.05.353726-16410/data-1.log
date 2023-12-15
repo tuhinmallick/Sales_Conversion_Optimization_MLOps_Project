@@ -1,0 +1,46 @@
+{"obj": {"type": "AssignString", "path": ["sys", "name"], "value": "Untitled"}, "version": 1, "at": 1702310345.8651888}
+{"obj": {"type": "AssignString", "path": ["sys", "description"], "value": ""}, "version": 2, "at": 1702310345.865482}
+{"obj": {"type": "AssignString", "path": ["monitoring", "753c2685", "hostname"], "value": "DESKTOP-I26235B"}, "version": 3, "at": 1702310345.8656363}
+{"obj": {"type": "AssignString", "path": ["sys", "hostname"], "value": "DESKTOP-I26235B"}, "version": 4, "at": 1702310345.8657582}
+{"obj": {"type": "AssignString", "path": ["monitoring", "753c2685", "pid"], "value": "16410"}, "version": 5, "at": 1702310345.8658757}
+{"obj": {"type": "AssignString", "path": ["monitoring", "753c2685", "tid"], "value": "140611961077760"}, "version": 6, "at": 1702310345.865987}
+{"obj": {"type": "AddStrings", "path": ["sys", "tags"], "values": []}, "version": 7, "at": 1702310345.8661625}
+{"obj": {"type": "AssignBool", "path": ["sys", "failed"], "value": false}, "version": 8, "at": 1702310345.8662899}
+{"obj": {"type": "ClearStringLog", "path": ["monitoring", "753c2685", "stdout"]}, "version": 9, "at": 1702310345.8664446}
+{"obj": {"type": "ClearStringLog", "path": ["monitoring", "753c2685", "stderr"]}, "version": 10, "at": 1702310345.8665943}
+{"obj": {"type": "AssignString", "path": ["source_code", "entrypoint"], "value": "run_pipeline.py"}, "version": 11, "at": 1702310345.8669775}
+{"obj": {"type": "UploadFileSet", "path": ["source_code", "files"], "file_globs": ["/home/vishal/ml_projects/Sales_Conversion_Optimization_MLOps_Project/run_pipeline.py"], "reset": "False"}, "version": 12, "at": 1702310345.8671646}
+{"obj": {"type": "ConfigFloatSeries", "path": ["monitoring", "753c2685", "cpu"], "min": 0.0, "max": 100.0, "unit": "%"}, "version": 13, "at": 1702310345.882032}
+{"obj": {"type": "ClearFloatLog", "path": ["monitoring", "753c2685", "cpu"]}, "version": 14, "at": 1702310345.8823147}
+{"obj": {"type": "ConfigFloatSeries", "path": ["monitoring", "753c2685", "memory"], "min": 0.0, "max": 9.228435516357422, "unit": "GB"}, "version": 15, "at": 1702310345.8824482}
+{"obj": {"type": "ClearFloatLog", "path": ["monitoring", "753c2685", "memory"]}, "version": 16, "at": 1702310345.8825047}
+{"obj": {"type": "AssignString", "path": ["source_code", "integrations", "zenml"], "value": "0.50.0"}, "version": 17, "at": 1702310345.8836474}
+{"obj": {"type": "LogFloats", "path": ["monitoring", "753c2685", "memory"], "values": [{"value": 0.9653739929199219, "step": null, "ts": 1702310345.8828616}]}, "version": 18, "at": 1702310345.8854208}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "Checking whether there is an H2O instance running at http://localhost:54321", "step": null, "ts": 1702310345.8875825}]}, "version": 19, "at": 1702310345.8876727}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "", "step": null, "ts": 1702310345.8881204}]}, "version": 20, "at": 1702310345.8881538}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": ".", "step": null, "ts": 1702310345.8910103}]}, "version": 21, "at": 1702310345.8910813}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "", "step": null, "ts": 1702310345.8919494}]}, "version": 22, "at": 1702310345.8920164}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": ".", "step": null, "ts": 1702310346.0926554}]}, "version": 23, "at": 1702310346.0927496}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "", "step": null, "ts": 1702310346.0957038}]}, "version": 24, "at": 1702310346.0957854}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": ".", "step": null, "ts": 1702310346.297523}]}, "version": 25, "at": 1702310346.297601}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "", "step": null, "ts": 1702310346.3017776}]}, "version": 26, "at": 1702310346.3018234}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": ".", "step": null, "ts": 1702310346.5037603}]}, "version": 27, "at": 1702310346.5039155}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "", "step": null, "ts": 1702310346.5046086}]}, "version": 28, "at": 1702310346.5046608}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": ".", "step": null, "ts": 1702310346.707779}]}, "version": 29, "at": 1702310346.7079277}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "", "step": null, "ts": 1702310346.7113893}]}, "version": 30, "at": 1702310346.7114913}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": " not found.", "step": null, "ts": 1702310346.9118052}]}, "version": 31, "at": 1702310346.9119692}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "\n", "step": null, "ts": 1702310346.9145331}]}, "version": 32, "at": 1702310346.9146395}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "Attempting to start a local H2O server...", "step": null, "ts": 1702310346.9167447}]}, "version": 33, "at": 1702310346.91695}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "\n", "step": null, "ts": 1702310346.9200442}]}, "version": 34, "at": 1702310346.9201145}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "  Java Version: openjdk version \"11.0.21\" 2023-10-17; OpenJDK Runtime Environment (build 11.0.21+9-post-Ubuntu-0ubuntu122.04); OpenJDK 64-Bit Server VM (build 11.0.21+9-post-Ubuntu-0ubuntu122.04, mixed mode, sharing)", "step": null, "ts": 1702310347.019022}]}, "version": 35, "at": 1702310347.0191095}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "\n", "step": null, "ts": 1702310347.0201395}]}, "version": 36, "at": 1702310347.020227}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "  Starting server from /home/vishal/ml_projects/Sales_Conversion_Optimization_MLOps_Project/venv/lib/python3.10/site-packages/h2o/backend/bin/h2o.jar", "step": null, "ts": 1702310347.020747}]}, "version": 37, "at": 1702310347.020808}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "\n", "step": null, "ts": 1702310347.0214126}]}, "version": 38, "at": 1702310347.021489}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "  Ice root: /tmp/tmp9xxzg55l", "step": null, "ts": 1702310347.0225093}]}, "version": 39, "at": 1702310347.0226252}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "\n", "step": null, "ts": 1702310347.0235746}]}, "version": 40, "at": 1702310347.023648}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "  JVM stdout: /tmp/tmp9xxzg55l/h2o_vishal_started_from_python.out", "step": null, "ts": 1702310347.0238698}]}, "version": 41, "at": 1702310347.0239024}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "\n", "step": null, "ts": 1702310347.0240176}]}, "version": 42, "at": 1702310347.024041}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "  JVM stderr: /tmp/tmp9xxzg55l/h2o_vishal_started_from_python.err", "step": null, "ts": 1702310347.02419}]}, "version": 43, "at": 1702310347.0242178}
+{"obj": {"type": "LogStrings", "path": ["monitoring", "753c2685", "stdout"], "values": [{"value": "\n", "step": null, "ts": 1702310347.0243359}]}, "version": 44, "at": 1702310347.0243568}
+{"obj": {"type": "LogFloats", "path": ["monitoring", "753c2685", "cpu"], "values": [{"value": 12.7, "step": null, "ts": 1702310347.1226575}]}, "version": 45, "at": 1702310347.1352105}
+{"obj": {"type": "LogFloats", "path": ["monitoring", "753c2685", "memory"], "values": [{"value": 0.9659881591796875, "step": null, "ts": 1702310347.1226575}]}, "version": 46, "at": 1702310347.1357307}
