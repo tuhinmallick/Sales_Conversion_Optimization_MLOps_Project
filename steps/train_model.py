@@ -39,12 +39,11 @@ def model_performance_validation(train_df: pd.DataFrame, test_df: pd.DataFrame):
     test_suite = TestSuite(tests=[TestValueMeanError()])
     test_suite.run(reference_data=train_df, current_data=test_df, column_mapping=column_mapping)
     threshold = test_suite.as_dict()['summary']['success_tests'] / test_suite.as_dict()['summary']['total_tests']
-    test_name = "Model Performance Test"
     passed_tests = test_suite.as_dict()['summary']['success_tests']
     failed_tests = test_suite.as_dict()['summary']['failed_tests']
     total_tests = test_suite.as_dict()['summary']['total_tests']
     logging.info(f"Number of passed tests are {passed_tests}, number of failed tests are {failed_tests}, out of {total_tests} tests conducted.")
-    
+
     if threshold < 0.65:
 
         # Initialize a run
@@ -52,6 +51,7 @@ def model_performance_validation(train_df: pd.DataFrame, test_df: pd.DataFrame):
 
         test_suite.save_html("Reports/model_performance_suite.html")
         neptune_run["html/Model Performance"].upload("Reports/model_performance_suite.html")
+        test_name = "Model Performance Test"
         email_report(passed_tests, failed_tests, total_tests, test_name, "Reports/model_performance_suite.html")
     else:
-        logging.info(f"All Model Performance checks passed")
+        logging.info("All Model Performance checks passed")

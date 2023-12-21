@@ -13,13 +13,12 @@ model_key = f"MOD{timestamp}"
 class ModelFactory:
     @staticmethod
     def create_model(name, key, project, api_token):
-        model = neptune.init_model(
+        return neptune.init_model(
             name=name,
             key=key,
             project=project,
             api_token=api_token,
         )
-        return model
 
 def train_h2o_automl(cleaned_dataset):
 
