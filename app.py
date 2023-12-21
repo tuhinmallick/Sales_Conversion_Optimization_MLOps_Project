@@ -24,8 +24,9 @@ def predict(data):
 st.sidebar.header('User Input Data')
 
 # Input fields
-input_data = {}
-input_data['Impressions'] = st.sidebar.number_input('Impressions', min_value=0)
+input_data = {
+    'Impressions': st.sidebar.number_input('Impressions', min_value=0)
+}
 input_data['Clicks'] = st.sidebar.number_input('Clicks', min_value=0)
 input_data['Spent'] = st.sidebar.number_input('Spent', min_value=0.0)
 input_data['Total_Conversion'] = st.sidebar.number_input('Total Conversion', min_value=0)
@@ -37,8 +38,8 @@ if st.button('Predict'):
     st.write(f"Predicted Approved Conversion: **{round(prediction, 2)}**")
 
 def redirect(url):
-    st.write(f"Redirecting to Neptune.ai...")
-    st.write(f"Please wait...")
+    st.write("Redirecting to Neptune.ai...")
+    st.write("Please wait...")
     st.write("Please note that you’ll need to sign in or register with a Neptune.ai account to view the full details of my project.")
     time.sleep(3)  # 3-second delay for demonstration
     st.markdown(f'<a href="{url}" target="_blank">Click here to go to Neptune.ai</a>', unsafe_allow_html=True)

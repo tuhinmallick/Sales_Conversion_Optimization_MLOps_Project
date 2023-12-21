@@ -25,9 +25,7 @@ class DataFetcher:
     def fetch_data(self) -> str:
         """Fetch data from the provided URL."""
         response = requests.get(self.url)
-        if response.status_code == 200:
-            return response.text
-        return None
+        return response.text if response.status_code == 200 else None
 
     @staticmethod
     def convert_to_dataframe(data_text: Optional[str]) -> pd.DataFrame:
@@ -63,23 +61,21 @@ def data_quality_validation(curr_data: pd.DataFrame) -> pd.DataFrame:
     """ZenML Step: Validates data quality and triggers email on failure"""
     test_suite = TestSuite(tests=[DataQualityTestPreset()])
     test_suite.run(reference_data=None, current_data=curr_data)
-    
+
     summary = test_suite.as_dict()['summary']
     passed_tests = summary['success_tests']
-    failed_tests = summary['failed_tests']
     total_tests = summary['total_tests']
-    
+
     threshold = passed_tests / total_tests if total_tests > 0 else 0
 
-    if threshold < 0.85:
-
-        # Initialize a run
-        neptune_run = get_neptune_run()
-
-        test_suite.save_html("Reports/data_quality_suite.html")
-
-        neptune_run["html/Data Quality Test"].upload("Reports/data_quality_suite.html")
-        
-        email_report(passed_tests, failed_tests, total_tests, "Data Quality Test", "Reports/data_quality_suite.html")
-    else:
+    if threshold >= 0.85:
         return curr_data
+    # Initialize a run
+    neptune_run = get_neptune_run()
+
+    test_suite.save_html("Reports/data_quality_suite.html")
+
+    neptune_run["html/Data Quality Test"].upload("Reports/data_quality_suite.html")
+
+    failed_tests = summary['failed_tests']
+    email_report(passed_tests, failed_tests, total_tests, "Data Quality Test", "Reports/data_quality_suite.html")

@@ -25,7 +25,7 @@ class DataCleaner:
 
 class DataDriftValidator:
     @staticmethod
-    def validate(reference_dataset: pd.DataFrame, current_dataset: pd.DataFrame)-> Tuple[pd.DataFrame, pd.DataFrame]:
+    def validate(reference_dataset: pd.DataFrame, current_dataset: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
         test_suite = TestSuite(tests=[DataDriftTestPreset(),])
         test_suite.run(reference_data=reference_dataset, current_data=current_dataset)
         threshold = test_suite.as_dict()['summary']['success_tests'] / test_suite.as_dict()['summary']['total_tests']
@@ -43,7 +43,7 @@ class DataDriftValidator:
             neptune_run["html/Data Drift Test"].upload("Reports/data_drift_suite.html")
             email_report(passed_tests, failed_tests, total_tests, "Data Drift Test", "Reports/data_drift_suite.html")
         else:
-            logging.info(f"All Data Drift checks passed")
+            logging.info("All Data Drift checks passed")
             return reference_dataset, current_dataset
 
 @step(enable_cache=False)
